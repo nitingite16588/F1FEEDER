@@ -4,6 +4,7 @@
  <html lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <!-- <base href="/#/"> -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>F-1 Feeder</title>
   <meta name="description" content="">
@@ -18,32 +19,10 @@
 
 
 </head>
-<body ng-app="F1FeederApp" ng-controller="driverController">
-  <input type="text" ng-model="nameFilter" value="">
-<table>
-  <thead>
-  <tr><th colspan="4">Drivers Championship Standings</th></tr>
-  </thead>
-  <tbody >
-    <tr ng-repeat="driver in driversList |filter:nameFilter">
-      <td >
-      {{$index+1}}
-      </td>
-      <td>
-        {{driver.nationality}}
+<body ng-app="F1FeederApp" >
+<ng-view></ng-view>
 
-         {{driver.Driver.givenName}}
 
-      </td>
-      <td>
-        {{driver.Constructors[0].name }}
-      </td>
-          <td>
-        {{driver.points}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 
 

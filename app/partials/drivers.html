@@ -1,0 +1,26 @@
+<input type="text" ng-model="nameFilter" value="">
+<table>
+<thead>
+<tr><th colspan="4">Drivers Championship Standings</th></tr>
+</thead>
+<tbody >
+  <tr ng-repeat="driver in driversList |filter:nameFilter">
+    <td >
+    {{$index+1}}
+    </td>
+    <td>
+      <a href="#/driver/{{driver.Driver.driverId}}">
+      {{driver.nationality}}
+       &nbsp;
+       {{driver.Driver.givenName}}</a>
+
+    </td>
+    <td>
+      {{driver.Constructors[0].name }}
+    </td>
+        <td>
+      {{driver.points}}
+    </td>
+  </tr>
+</tbody>
+</table>
