@@ -19,5 +19,13 @@ return $http({
 
   }
 
+
+  getApi.getDriverRaceDetails=function(id){
+return $http({  method:'JSONP',
+ url: 'http://ergast.com/api/f1/2013/drivers/'+ id +'/results.json?callback=JSON_CALLBACK'
+})
+
+  }
+
 return getApi;
 })

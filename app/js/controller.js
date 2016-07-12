@@ -19,7 +19,20 @@ API.getDriverDetails($scope.id).then(function successCallback(response) {
 
   //console.log(respons);
 $scope.driver=response.data.MRData.StandingsTable.StandingsLists[0].DriverStandings[0];
-
 console.log($scope.driver);
 });
+
+
+
+API.getDriverRaceDetails($scope.id).then(function successCallback(response) {
+console.log(response);
+  //console.log(respons);
+$scope.races=response.data.MRData.RaceTable.Races;
+
+
+
+});
+
+
+
 });
